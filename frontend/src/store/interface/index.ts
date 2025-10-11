@@ -1,0 +1,73 @@
+import { RouteRecordRaw } from 'vue-router';
+import { DeviceType } from '@/enums/app';
+export interface ThemeConfigProp {
+    panelName: string;
+    primary: string;
+    theme: string; // dark | bright ｜ auto
+    footer: boolean;
+
+    title: string;
+    logo: string;
+    logoWithText: string;
+    favicon: string;
+    loginImage: string;
+    loginBgType: string;
+    loginBackground: string;
+    loginBtnLinkColor: string;
+    themeColor: string;
+}
+
+export interface Watermark {
+    color: string;
+    fontSize: number;
+    content: string;
+    rotate: number;
+    gap: number;
+}
+
+export interface GlobalState {
+    isLoading: boolean;
+    loadingText: string;
+    isLogin: boolean;
+    entrance: string;
+    language: string; // zh | en | tw
+    themeConfig: ThemeConfigProp;
+    isFullScreen: boolean;
+    openMenuTabs: boolean;
+    watermark: Watermark;
+    isOnRestart: boolean;
+    agreeLicense: boolean;
+    hasNewVersion: boolean;
+    ignoreCaptcha: boolean;
+    device: DeviceType;
+    lastFilePath: string;
+    currentDB: string;
+    currentRedisDB: string;
+    showEntranceWarn: boolean;
+    defaultNetwork: string;
+
+    isProductPro: boolean;
+    isIntl: boolean;
+    productProExpires: number;
+    isMasterProductPro: boolean;
+    isOffLine: boolean;
+
+    currentNode: string;
+    currentNodeAddr: string;
+}
+
+export interface MenuState {
+    isCollapse: boolean;
+    menuList: RouteRecordRaw[];
+    withoutAnimation: boolean;
+}
+
+export interface TerminalState {
+    lineHeight: number;
+    letterSpacing: number;
+    fontSize: number;
+    cursorBlink: string;
+    cursorStyle: string;
+    scrollback: number;
+    scrollSensitivity: number;
+}

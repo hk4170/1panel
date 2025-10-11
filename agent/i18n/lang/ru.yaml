@@ -1,0 +1,504 @@
+ErrInvalidParams: 'Ошибка параметра запроса: {{ .detail }}'
+ErrTokenParse: 'Ошибка генерации токена: {{ .detail }}'
+ErrInitialPassword: 'Исходный пароль неверный'
+ErrInternalServer: 'Внутренняя ошибка сервера: {{ .detail }}'
+ErrRecordExist: 'Запись уже существует'
+ErrRecordNotFound: 'Запись не найдена'
+ErrStructTransform: 'Не удалось преобразовать тип: {{ .err }}'
+ErrNotLogin: 'Пользователь не вошел в систему: {{ .detail }}'
+ErrPasswordExpired: 'Срок действия текущего пароля истек: {{ .detail }}'
+ErrNotSupportType: 'Система не поддерживает текущий тип: {{ .name }}'
+ErrProxy: 'Ошибка запроса, проверьте статус узла: {{ .detail }}'
+ErrApiConfigStatusInvalid: 'Доступ к интерфейсу API запрещен: {{ .detail }}'
+ErrApiConfigKeyInvalid: 'Ошибка ключа интерфейса API: {{ .detail }}'
+ErrApiConfigIPInvalid: 'IP-адрес, используемый для вызова интерфейса API, отсутствует в белом списке: {{ .detail }}'
+ErrApiConfigDisable: 'Этот интерфейс запрещает использование вызовов интерфейса API: {{ .detail }}'
+ErrApiConfigKeyTimeInvalid: 'Ошибка временной метки интерфейса API: {{ .detail }}'
+StartPushSSLToNode: "Начало отправки сертификата на узел"
+PushSSLToNodeFailed: "Не удалось отправить сертификат на узел: {{ .err }}"
+PushSSLToNodeSuccess: "Сертификат успешно отправлен на узел"
+
+ErrMinQuickJump: "Пожалуйста, установите хотя бы одну запись быстрого перехода!"
+ErrMaxQuickJump: "Можно установить до четырех записей быстрого перехода!"
+
+#общий
+ErrUsernameIsExist: 'Имя пользователя уже существует'
+ErrNameIsExist: 'Имя уже существует'
+ErrDemoEnvironment: 'Демо-сервер, эта операция запрещена!'
+ErrCmdTimeout: 'Время выполнения команды истекло!'
+ErrCmdIllegal: 'В команде выполнения есть недопустимые символы. Измените ее и повторите попытку!'
+ErrPortExist: 'Порт {{ .port }} уже занят {{ .type }} [{{ .name }}]'
+TYPE_APP: 'Приложение'
+TYPE_RUNTIME: 'Среда выполнения'
+TYPE_DOMAIN: 'Доменное имя'
+ErrTypePort: 'Формат порта {{ .name }} неверен'
+ErrTypePortRange: 'Диапазон портов должен быть в пределах 1-65535'
+Success: 'Успех'
+Failed: 'Не удалось'
+SystemRestart: 'Задача прервана из-за перезапуска системы'
+ErrGroupIsDefault: 'Группа по умолчанию, не может быть удалена'
+ErrGroupIsInWebsiteUse: 'Группа используется другим веб-сайтом и не может быть удалена.'
+
+#резервное копирование
+Localhost: 'Локальная машина'
+ErrBackupInUsed: 'Учетная запись резервного копирования использовалась в запланированной задаче и не может быть удалена.'
+ErrBackupCheck: 'Проверка подключения к резервной копии учетной записи не удалась {{ .err }}'
+ErrBackupLocalDelete: 'Удаление учетной записи резервного копирования локального сервера пока не поддерживается'
+ErrBackupLocalCreate: 'Создание учетных записей резервного копирования локального сервера пока не поддерживается'
+
+#приложение
+ErrPortInUsed: '{{ .detail }} порт уже занят!'
+ErrAppLimit: 'Количество установленных приложений превысило лимит'
+ErrNotInstall: 'Приложение не установлено'
+ErrPortInOtherApp: 'Порт {{ .port }} уже занят приложением {{ .apps }}!'
+ErrDbUserNotValid: 'Существующая база данных, имя пользователя и пароль не совпадают!'
+ErrUpdateBuWebsite: 'Приложение успешно обновлено, но изменение файла конфигурации веб-сайта не удалось. Пожалуйста, проверьте конфигурацию! '
+Err1PanelNetworkFailed: 'Создание сети контейнеров по умолчанию не удалось! {{ .detail }}'
+ErrFileParse: 'Ошибка анализа файла docker-compose приложения!'
+ErrInstallDirNotFound: 'Каталог установки не существует. Если вам необходимо удалить, выберите Принудительное удаление.'
+AppStoreIsUpToDate: 'В магазине приложений уже установлена последняя версия'
+LocalAppVersionNull: 'Приложение {{ .name }} не синхронизировано с версией! Невозможно добавить в список приложений.'
+LocalAppVersionErr: 'Синхронизация версии {{ .version }} {{ .name }} не удалась! {{ .err }}'
+ErrFileNotFound: 'Файл {{ .name }} не существует'
+ErrFileParseApp: '{{ .name }} анализ файла не удался {{ .err }}'
+ErrAppDirNull: 'Папка версии не существует'
+LocalAppErr: 'Синхронизация приложения {{ .name }} не удалась! {{ .err }}'
+ErrContainerName: 'Имя контейнера уже существует'
+ErrCreateHttpClient: 'Не удалось создать запрос {{ .err }}'
+ErrHttpReqTimeOut: 'Истекло время ожидания запроса {{ .err }}'
+ErrHttpReqFailed: 'Запрос не выполнен {{ .err }}'
+ErrNoSuchHost: 'Не удалось найти запрошенный сервер {{ .err }}'
+ErrHttpReqNotFound: 'Запрошенный ресурс {{ .err }} не найден'
+ErrContainerNotFound: 'Контейнер {{ .name }} не существует'
+ErrContainerMsg: 'Контейнер {{ .name }} ненормален. Подробности смотрите в журнале на странице контейнера.'
+ErrAppBackup: '{{ .name }} резервное копирование приложения не удалось {{ .err }}'
+ErrVersionTooLow: 'Текущая версия 1Panel слишком низкая для обновления App Store. Пожалуйста, обновите версию перед началом работы.'
+ErrAppNameExist: 'Имя приложения уже существует'
+AppStoreIsSyncing: 'App Store синхронизируется, повторите попытку позже'
+ErrGetCompose: 'Не удалось получить файл docker-compose.yml! {{ .detail }}'
+ErrAppWarn: 'Ненормальное состояние, проверьте журнал'
+ErrAppParamKey: 'Поле параметра {{ .name }} ненормально'
+ErrAppUpgrade: 'Обновление приложения {{ .name }} не удалось {{ .err }}'
+AppRecover: 'Откатить приложение {{ .name }}'
+PullImageStart: 'Начать извлечение изображения {{ .name }}'
+PullImageSuccess: 'Изображение извлечено успешно'
+AppStoreIsLastVersion: 'В App Store уже установлена последняя версия'
+AppStoreSyncSuccess: 'Синхронизация с App Store прошла успешно'
+SyncAppDetail: 'Синхронизировать конфигурацию приложения'
+AppVersionNotMatch: 'Приложению {{ .name }} требуется более высокая версия 1Panel, синхронизация пропускается'
+MoveSiteDir: "Обнаружено изменение каталога сайта. Необходимо перенести каталог сайта OpenResty в {{ .name }}"
+MoveSiteDirSuccess: 'Успешная миграция каталога веб-сайта'
+DeleteRuntimePHP: 'Удалить среду выполнения PHP'
+CustomAppStoreFileValid: 'Пакеты магазина приложений должны быть в формате .tar.gz'
+PullImageTimeout: 'Истекло время ожидания извлечения изображения. Попробуйте увеличить ускорение изображения или выбрать другое ускорение изображения'
+ErrAppIsDown: '{{ .name }} статус приложения ненормальный, проверьте'
+ErrCustomApps: 'Установлено приложение. Сначала удалите его'
+ErrCustomRuntimes: 'Установлена среда выполнения. Сначала удалите ее'
+ErrAppVersionDeprecated: "Приложение {{ .name }} несовместимо с текущей версией 1Panel, пропущено"
+ErrDockerFailed: "Состояние Docker аномально, проверьте состояние сервиса"
+ErrDockerComposeCmdNotFound: "Команда Docker Compose отсутствует, пожалуйста, установите эту команду на хост-машине сначала"
+
+#ssh
+ExportIP: "IP входа"
+ExportArea: "Местоположение"
+ExportPort: "Порт"
+ExportAuthMode: "Способ входа"
+ExportUser: "Пользователь"
+ExportStatus: "Статус входа"
+ExportDate: "Время"
+
+#файл
+ErrFileCanNotRead: 'Этот файл не поддерживает предварительный просмотр'
+ErrFileToLarge: 'Файл больше 10 МБ и не может быть открыт'
+ErrPathNotFound: 'Каталог не существует'
+ErrMovePathFailed: 'Целевой путь не может содержать исходный путь!'
+ErrLinkPathNotFound: 'Целевой путь не существует!'
+ErrFileIsExist: 'Файл или папка уже существует!'
+ErrFileUpload: '{{ .name }} не удалось загрузить файл {{ .detail }}'
+ErrFileDownloadDir: 'Папка загрузки не поддерживается'
+ErrCmdNotFound: 'Команда {{ .name }} не существует, сначала установите эту команду на хосте'
+ErrSourcePathNotFound: 'Исходный каталог не существует'
+ErrFavoriteExist: 'Этот путь уже добавлен в избранное'
+ErrInvalidChar: 'Недопустимые символы не допускаются'
+ErrPathNotDelete: 'Выбранный каталог не может быть удален'
+ErrLogFileToLarge: "Файл журнала превышает 500MB и не может быть открыт"
+FileDropFailed: "Не удалось очистить файл {{ .name }}: {{ .err }}"
+FileDropSuccess: "Файл {{ .name }} успешно очищен, удалено {{ .count }} файлов, освобождено {{ .size }} дискового пространства"
+FileDropSum: "Очистка файлов завершена успешно, всего удалено {{ .count }} файлов, освобождено {{ .size }} дискового пространства"
+ErrBadDecrypt: "Ошибка пароля расшифровки сжатого пакета, распаковка не удалась, проверьте и повторите попытку!"
+
+#веб-сайт
+ErrAliasIsExist: 'Псевдоним уже существует'
+ErrBackupMatch: 'Файл резервной копии не соответствует некоторым текущим данным веб-сайта {{ .detail }}'
+ErrBackupExist: 'Соответствующая часть исходных данных в файле резервной копии не существует {{ .detail }}'
+ErrPHPResource: 'Локальная операционная среда не поддерживает переключение!'
+ErrPathPermission: 'В каталоге index обнаружена папка с разрешениями, отличными от 1000:1000, что может привести к ошибке Отказано в доступе на веб-сайте. Пожалуйста, нажмите кнопку Сохранить выше.'
+ErrDomainIsUsed: 'Доменное имя уже используется веб-сайтом [{{ .name }}]'
+ErrDomainFormat: 'Неверный формат доменного имени {{ .name }}'
+ErrDefaultAlias: 'по умолчанию зарезервирован код, используйте другой код'
+ErrParentWebsite: 'Сначала вам необходимо удалить дочерний сайт {{ .name }}'
+ErrBuildDirNotFound: 'Каталог сборки не существует'
+ErrImageNotExist: 'Образ операционной среды {{ .name }} не существует, пожалуйста, отредактируйте операционную среду заново'
+ErrProxyIsUsed: "Балансировка нагрузки используется обратным прокси, невозможно удалить"
+ErrSSLValid: 'Файл сертификата аномален, проверьте статус сертификата!'
+ErrWebsiteDir: "Пожалуйста, выберите директорию внутри директории сайта."
+ErrComposerFileNotFound: "Файл composer.json не существует"
+ErrRuntimeNoPort: "Среда выполнения не настроена с портом, сначала отредактируйте среду выполнения."
+Status: 'Статус'
+start: 'Запустить'
+stop: 'Остановить'
+delete: 'Удалить'
+
+#ssl
+ErrSSLCannotDelete: 'Сертификат {{ .name }} используется веб-сайтом и не может быть удален'
+ErrAccountCannotDelete: 'Учетная запись связана с сертификатом и не может быть удалена'
+ErrSSLApply: 'Обновление сертификата прошло успешно, перезагрузка OpenResty не удалась, проверьте конфигурацию!'
+ErrEmailIsExist: 'Почтовый ящик уже существует'
+ErrSSLKeyNotFound: 'Файл закрытого ключа не существует'
+ErrSSLCertificateNotFound: 'Файл сертификата не существует'
+ErrSSLKeyFormat: 'Проверка файла закрытого ключа не удалась'
+ErrSSLCertificateFormat: 'Неверный формат файла сертификата, используйте формат pem'
+ErrEabKidOrEabHmacKeyCannotBlank: 'EabKid или EabHmacKey не могут быть пустыми'
+ErrOpenrestyNotFound: 'Для режима HTTP необходимо сначала установить Openresty'
+ApplySSLStart: 'Начать подачу заявки на сертификат, доменное имя [{{ .domain }}], метод подачи заявки [{{ .type }}]'
+dnsAccount: 'DNS Авто'
+dnsManual: 'Руководство по DNS'
+http: 'HTTP'
+ApplySSLFailed: 'Заявка на сертификат [{{ .domain }}] не выполнена, {{ .detail }}'
+ApplySSLSuccess: 'Заявка на сертификат [{{ .domain }}] успешно подана! '
+DNSAccountName: 'DNS-аккаунт [{{ .name }}] поставщик [{{ .type }}]'
+PushDirLog: 'Сертификат перемещен в каталог [{{ .path }}] {{ .status }}'
+ErrDeleteCAWithSSL: 'Текущая организация имеет сертификат, который был выдан и не может быть удален.'
+ErrDeleteWithPanelSSL: 'Конфигурация SSL панели использует этот сертификат и не может быть удалена'
+ErrDefaultCA: 'Невозможно удалить полномочия по умолчанию'
+ApplyWebSiteSSLLog: 'Начинается обновление сертификата веб-сайта {{ .name }}'
+ErrUpdateWebsiteSSL: 'Обновление сертификата веб-сайта {{ .name }} не удалось: {{ .err }}'
+ApplyWebSiteSSLSuccess: 'Сертификат веб-сайта успешно обновлен'
+ErrExecShell: 'Не удалось выполнить скрипт {{ .err }}'
+ExecShellStart: 'Начать выполнение скрипта'
+ExecShellSuccess: 'Скрипт выполнен успешно'
+StartUpdateSystemSSL: 'Начать обновление системного сертификата'
+UpdateSystemSSLSuccess: 'Сертификат системы обновлен успешно'
+ErrWildcardDomain: 'Невозможно подать заявку на получение подстановочного сертификата доменного имени в режиме HTTP'
+ErrApplySSLCanNotDelete: "Нельзя удалить сертификат {{.name}}, который находится в процессе выпуска. Пожалуйста, попробуйте позже."
+
+#mysql
+ErrUserIsExist: 'Текущий пользователь уже существует, пожалуйста, введите еще раз'
+ErrDatabaseIsExist: 'Текущая база данных уже существует, пожалуйста, введите ее повторно'
+ErrExecTimeOut: 'Время выполнения SQL истекло, проверьте базу данных'
+ErrRemoteExist: 'Удаленная база данных с таким именем уже существует. Измените его и повторите попытку'
+ErrLocalExist: 'Имя уже существует в локальной базе данных, измените его и повторите попытку'
+
+#редис
+ErrTypeOfRedis: 'Тип файла восстановления не соответствует текущему методу сохранения. Измените его и повторите попытку'
+
+#контейнер
+ErrInUsed: '{{ .detail }} используется и не может быть удален'
+ErrObjectInUsed: 'Объект используется и не может быть удален'
+ErrObjectBeDependent: 'Это изображение зависит от других изображений и не может быть удалено'
+ErrPortRules: 'Номер порта не совпадает, введите заново!'
+ErrPgImagePull: 'Время извлечения изображения истекло. Настройте ускорение изображения или вручную извлеките изображение {{ .name }} и повторите попытку'
+PruneHelper: "Очистка удалила {{ .name }} в количестве {{ .count }}, освободив {{ .size }} дискового пространства"
+ImageRemoveHelper: "Удалён образ {{ .name }}, освобождено {{ .size }} дискового пространства"
+BuildCache: "Кэш сборки"
+Volume: "Том хранилища"
+Network: "Сеть"
+
+#время выполнения
+ErrFileNotExist: 'Файл {{ .detail }} не существует! Проверьте целостность исходного файла!'
+ErrImageBuildErr: 'Сборка образа не удалась'
+ErrImageExist: "Изображение уже существует! Пожалуйста, измените имя изображения."
+ErrDelWithWebsite: 'Операционная среда уже связана с веб-сайтом и не может быть удалена'
+ErrRuntimeStart: 'Запуск не удался'
+ErrPackageJsonNotFound: 'файл package.json не существует'
+ErrScriptsNotFound: 'Элемент конфигурации скриптов не найден в package.json'
+ErrContainerNameNotFound: 'Не удалось получить имя контейнера, проверьте файл .env'
+ErrNodeModulesNotFound: 'Папка node_modules не существует! Измените среду выполнения или дождитесь ее успешного запуска'
+ErrContainerNameIsNull: 'Имя контейнера не существует'
+ErrPHPPortIsDefault: "A porta 9000 é a porta padrão, por favor, modifique e tente novamente"
+ErrPHPRuntimePortFailed: "A porta {{ .name }} já está sendo usada pelo ambiente de tempo de execução atual, por favor, modifique e tente novamente"
+
+#инструмент
+ErrConfigNotFound: 'Файл конфигурации не существует'
+ErrConfigParse: 'Неверный формат файла конфигурации'
+ErrConfigIsNull: 'Файл конфигурации не может быть пустым'
+ErrConfigDirNotFound: 'Рабочий каталог не существует'
+ErrConfigAlreadyExist: 'Файл конфигурации с таким именем уже существует'
+ErrUserFindErr: 'Поиск пользователя {{ .name }} не удался {{ .err }}'
+
+#cronjob
+CutWebsiteLogSuccess: 'Журнал веб-сайта {{ .name }} успешно вырезан, путь к резервной копии {{ .path }}'
+HandleShell: 'Выполнить скрипт {{ .name }}'
+HandleNtpSync: 'Синхронизация системного времени'
+HandleSystemClean: 'Очистка системного кэша'
+SystemLog: 'Системный лог'
+CutWebsiteLog: 'Ротация логов сайта'
+FileOrDir: 'Каталог / Файл'
+UploadFile: 'Загрузка файла резервной копии {{ .file }} в {{ .backup }}'
+Upload: "Загрузить"
+IgnoreBackupErr: "Ошибка резервного копирования: {{ .detail }}, игнорируем эту ошибку..."
+IgnoreUploadErr: "Ошибка загрузки: {{ .detail }}, игнорируем эту ошибку..."
+LoadBackupFailed: "Не удалось получить подключение к учетной записи резервной копии, ошибка: {{ .detail }}"
+InExecuting: "Текущая задача выполняется, не повторяйте выполнение!"
+NoSuchResource: "В базе данных не найдено содержимое резервной копии, пропускаем..."
+
+#ящик для инструментов
+ErrNotExistUser: 'Текущий пользователь не существует, измените его и повторите попытку!'
+ErrBanAction: 'Настройка не удалась. Текущая служба {{ .name }} недоступна. Проверьте и повторите попытку!'
+ErrClamdscanNotFound: 'Команда clamdscan не обнаружена, обратитесь к документации, чтобы установить ее!'
+
+#tamper
+CleanTamperSetting: "Очистить исторические настройки защиты"
+SetTamperWithRules: "Запустить защиту каталога согласно правилам"
+ProtectDir: "Защитить каталог {{ .name }}"
+IgnoreFile: "Защитить файл {{ .name }}"
+AbsoluteProtectFile: "Защищенный файл с абсолютным путем"
+TamperSetSucessful: "Настройки защиты завершены, начинаю мониторинг следующих каталогов:"
+
+#ваф
+ErrScope: 'Изменение этой конфигурации не поддерживается'
+ErrStateChange: 'He удалось изменить состояние'
+ErrRuleExist: 'Правило уже существует'
+ErrRuleNotExist: 'Правило не существует'
+ErrParseIP: 'Неправильный формат IP'
+ErrDefaultIP: 'по умолчанию это зарезервированное имя, пожалуйста, измените его на другое имя'
+ErrGroupInUse: 'IP-группа используется черным/белым списком и не может быть удалена'
+ErrIPGroupAclUse: "Группа IP используется пользовательскими правилами сайта {{ .name }}, невозможно удалить"
+ErrGroupExist: 'Имя группы IP уже существует'
+ErrIPRange: 'Неверный диапазон IP-адресов'
+ErrIPExist: 'IP-адрес уже существует'
+urlDefense: 'Правила URL'
+urlHelper: 'Запрещенный URL'
+dirFilter: 'Фильтр каталогов'
+xss: 'XSS'
+phpExec: 'Выполнение PHP-скрипта'
+oneWordTrojan: 'Троян из одного слова'
+appFilter: 'Применить фильтрацию опасных каталогов'
+webshell: 'Be6-оболочка'
+args: 'Правила параметров'
+protocolFilter: 'Фильтрация протоколов'
+javaFileter: 'Фильтр опасных файлов Java'
+scannerFilter: 'Фильтр сканера'
+escapeFilter: 'фильтр побега'
+customRule: 'Пользовательское правило'
+httpMethod: 'Фильтрация метода HTTP'
+fileExt: 'Ограничения на загрузку файлов'
+defaultIpBlack: 'Вредоносная группа IP'
+cookie: 'Правила использования файлов cookie'
+urlBlack: 'Черный список URL'
+uaBlack: 'Черный список User-Agent'
+attackCount: 'Ограничение частоты атак'
+fileExtCheck: 'Ограничения на загрузку файлов'
+geoRestrict: 'Региональные ограничения доступа'
+unknownWebsite: 'Несанкционированный доступ к доменному имени'
+notFoundCount: 'Ограничение скорости 404'
+headerDefense: 'Правила заголовка'
+defaultUaBlack: 'Правила User-Agent'
+methodWhite: 'Правила HTTP'
+captcha: 'человеко-машинная верификация'
+fiveSeconds: '5 секунд проверки'
+vulnCheck: 'Дополнительные правила'
+acl: 'Пользовательские правила'
+sql: 'SQL-инъекция'
+cc: 'Ограничение частоты доступа'
+defaultUrlBlack: 'Правила URL'
+sqlInject: 'SQL-инъекция'
+ErrDBNotExist: 'База данных не существует'
+allow: 'разрешить'
+deny: 'отрицать'
+OpenrestyNotFound: 'Openresty не установлен'
+remoteIpIsNull: "Список IP пуст"
+OpenrestyVersionErr: "Версия Openresty слишком низкая, пожалуйста, обновите Openresty до 1.27.1.2-2-2-focal"
+
+#задача
+TaskStart: '{{ .name }} Задача начинается [START]'
+TaskEnd: '{{ .name }} Задача выполнена [ЗАВЕРШЕНО]'
+TaskFailed: 'Задача {{ .name }} не выполнена'
+TaskTimeout: '{{ .name }} истекло время ожидания'
+TaskSuccess: '{{ .name }} Задача выполнена успешно'
+TaskRetry: 'Начать {{ .name }}-ю повторную попытку'
+SubTaskSuccess: '{{ .name }} выполнено успешно'
+SubTaskFailed: '{{ .name }} не удалось: {{ .err }}'
+TaskInstall: 'Установить'
+TaskUninstall: 'Удалить'
+TaskCreate: 'Создать'
+TaskDelete: 'Удалить'
+TaskUpgrade: 'Обновить'
+TaskUpdate: 'Обновить'
+TaskRestart: 'Перезапуск'
+TaskProtect: "Защита"
+TaskBackup: 'Резервное копирование'
+TaskRecover: 'Восстановить'
+TaskRollback: 'Откат'
+TaskPull: 'Вытянуть'
+TaskCommit: 'Kоммит'
+ЗадачаСборка: 'Сборка'
+TaskPush: 'Push'
+TaskClean: "Очистка"
+TaskHandle: 'Выполнить'
+Website: 'Be6-сайт'
+App: 'Приложение'
+Runtime: 'Среда выполнения'
+Database: 'База данных'
+ConfigFTP: 'Создать пользователя FTP {{ .name }}'
+ConfigOpenresty: 'Создать файл конфигурации Openresty'
+InstallAppSuccess: 'Приложение {{ .name }} успешно установлено'
+ConfigRuntime: 'Настройка среды выполнения'
+ConfigApp: 'Приложение конфигурации'
+SuccessStatus: '{{ .name }} успешно'
+FailedStatus: '{{ .name }} не удалось {{ .err }}'
+HandleLink: 'Обработка ассоциации приложений'
+HandleDatabaseApp: 'Обработка параметров приложения'
+ExecShell: 'Выполнить скрипт {{ .name }}'
+PullImage: 'Вытянуть изображение'
+Start: 'Старт'
+Run: 'Старт'
+Stop: 'Стоп'
+Image: 'Зеркало'
+Compose: 'Оркестровка'
+Container: 'Контейнер'
+AppLink: 'Связанное приложение'
+EnableSSL: 'Включить HTTPS'
+AppStore: 'Магазин приложений'
+TaskSync: 'Синхронизировать'
+LocalApp: 'Локальное приложение'
+SubTask: 'Подзадача'
+RuntimeExtension: 'Расширение среды выполнения'
+TaskIsExecuting: 'Задача выполняется'
+CustomAppstore: 'Хранилище пользовательских приложений'
+TaskExec: 'Выполнить'
+TaskBatch: "Пакетная операция"
+
+# task - clam
+Clamscan: "Сканировать {{ .name }}"
+TaskScan: "Сканировать"
+
+# задача - ай
+OllamaModelPull: 'Вытянуть модель Ollama {{ .name }}'
+OllamaModelSize: 'Получить размер модели Ollama {{ .name }}'
+
+# снимок задачи
+Snapshot: 'Снимок'
+SnapDBInfo: 'Запись информации о базе данных 1Panel'
+SnapCopy: 'Копировать файлы и каталоги {{ .name }}'
+SnapNewDB: 'Инициализировать соединение с базой данных {{ .name }}'
+SnapDeleteOperationLog: 'Удалить журнал операций'
+SnapDeleteLoginLog: 'Удалить журнал доступа'
+SnapDeleteMonitor: 'Удалить данные мониторинга'
+SnapRemoveSystemIP: 'Удалить системный IP'
+SnapBaseInfo: 'Записать основную информацию 1Panel'
+SnapInstallAppImageEmpty: 'Образы приложений не выбраны, пропускаем...'
+SnapInstallApp: 'Резервное копирование приложений, установленных в 1Panel'
+SnapDockerSave: 'Сжать установленные приложения'
+SnapLocalBackup: 'Резервное копирование локального каталога резервных копий 1Panel'
+SnapCompressBackup: 'Сжать локальный каталог резервных копий'
+SnapPanelData: 'Резервное копирование каталога данных 1Panel'
+SnapCompressPanel: 'Каталог сжатых данных'
+SnapWebsite: 'Резервное копирование каталога веб-сайта 1Panel'
+SnapCloseDBConn: 'Закрыть соединение с базой данных'
+SnapCompress: 'Создание файлов моментальных снимков'
+SnapCompressFile: 'Сжать файл моментального снимка'
+SnapCheckCompress: 'Проверить файл сжатия снимка'
+SnapCompressSize: 'Размер файла снимка {{ .name }}'
+SnapUpload: 'Загрузить файл снимка'
+SnapUploadTo: 'Загрузить файл снимка в {{ .name }}'
+SnapUploadRes: 'Загрузить файл снимка в {{ .name }}'
+
+SnapshotRecover: 'Восстановление моментального снимка'
+RecoverDownload: 'Загрузить файл снимка'
+Download: 'Скачать'
+RecoverDownloadAccount: 'Получить резервную копию учетной записи для загрузки моментального снимка {{ .name }}'
+RecoverDecompress: 'Распаковка сжатых файлов моментальных снимков'
+Decompress: 'Декомпрессия'
+BackupBeforeRecover: 'Резервное копирование системных данных перед созданием снимка'
+Readjson: 'Прочитать файл JSON в снимке'
+ReadjsonPath: 'Получить путь к файлу JSON в снимке'
+ReadjsonContent: 'Прочитать файл Json'
+ReadjsonMarshal: 'Обработка Json escape'
+RecoverApp: 'Восстановить установленные приложения'
+RecoverWebsite: 'Восстановить каталог веб-сайта'
+RecoverAppImage: 'Восстановить резервную копию образа снимка'
+RecoverCompose: 'Восстановить содержимое другого композитора'
+RecoverComposeList: 'Восстановить всех композиторов'
+RecoverComposeItem: 'Восстановить сообщение {{ .name }}'
+RecoverAppEmpty: 'В файле снимка не найдено резервной копии образа приложения'
+RecoverBaseData: 'Восстановить базовые данные и файлы'
+RecoverDaemonJsonEmpty: 'Ни файл снимка, ни текущая машина не имеют файла конфигурации контейнера daemon.json'
+RecoverDaemonJson: 'Восстановить файл конфигурации контейнера daemon.json'
+RecoverDBData: 'Восстановить данные базы данных'
+RecoverBackups: 'Восстановить локальный каталог резервных копий'
+RecoverPanelData: 'Каталог данных восстановления'
+
+# задача - контейнер
+ContainerNewCliet: 'Инициализировать Docker-клиент'
+ContainerImagePull: 'Извлечь изображение контейнера {{ .name }}'
+ContainerRemoveOld: 'Удалить исходный контейнер {{ .name }}'
+ContainerImageCheck: 'Проверьте, нормально ли извлекается изображение'
+ContainerLoadInfo: 'Получить основную информацию о контейнере'
+ContainerRecreate: 'Обновление контейнера не удалось, сейчас начну восстанавливать исходный контейнер'
+ContainerCreate: 'Создать новый контейнер {{ .name }}'
+ContainerCreateFailed: 'Создание контейнера не удалось, удалите неудавшийся контейнер'
+ContainerStartCheck: 'Проверить, запущен ли контейнер'
+
+# задача - изображение
+ImageBuild: 'Создание изображения'
+ImageBuildStdoutCheck: 'Анализ содержимого выходного изображения'
+ImageBuildRes: 'Выходные данные сборки образа: {{ .name }}'
+ImagePull: 'Вытащить изображение'
+ImageRepoAuthFromDB: 'Получить информацию об аутентификации репозитория из базы данных'
+ImaegPullRes: 'Выход извлечения изображения: {{ .name }}'
+ImagePush: 'Отправить изображение'
+ImageRenameTag: 'Изменить тег изображения'
+ImageNewTag: 'Новый тег изображения {{ .name }}'
+ImaegPushRes: 'Вывод push-изображения: {{ .name }}'
+ComposeCreate: 'Создать композицию'
+ComposeCreateRes: 'Составить вывод создания: {{ .name }}'
+
+# задача - веб-сайт
+BackupNginxConfig: 'Резервное копирование файла конфигурации OpenResty веб-сайта'
+CompressFileSuccess: 'Каталог успешно сжат, сжат в {{ .name }}'
+CompressDir: 'Каталог сжатия'
+DeCompressFile: 'Распаковать файл {{ .name }}'
+ErrCheckValid: 'Проверка файла резервной копии не удалась, {{ .name }}'
+Rollback: 'Откат'
+websiteDir: 'Каталог веб-сайтов'
+RecoverFailedStartRollBack: 'Восстановление не удалось, начать откат'
+AppBackupFileIncomplete: 'Файл резервной копии неполный и в нем отсутствуют файлы app.json или app.tar.gz'
+AppAttributesNotMatch: 'Тип или имя приложения не совпадают'
+
+#тревога
+ErrAlert: 'Формат предупреждающего сообщения неверен, проверьте и повторите попытку!'
+ErrAlertPush: 'Ошибка при отправке оповещения. Проверьте и повторите попытку!'
+ErrAlertSave: 'Ошибка сохранения информации о тревоге, проверьте и повторите попытку!'
+ErrAlertSync: 'Ошибка синхронизации информации о тревоге, проверьте и повторите попытку!'
+ErrAlertRemote: 'Ошибка удаленного сообщения об ошибке, проверьте и повторите попытку!'
+
+#task - runtime
+ErrInstallExtension: "Уже выполняется задача установки, подождите, пока задача завершится"
+
+# alert mail template
+PanelAlertTitle: "Уведомление панели"
+TestAlertTitle: "Тестовое письмо - проверка подключения"
+TestAlert: "Это тестовое письмо для проверки правильности настройки отправки писем."
+LicenseExpirationAlert: "Срок действия лицензии на 1Panel истекает через {{ .day }} дней. Подробности смотрите в панели."
+CronJobFailedAlert: "Запланированное задание '{{ .name }}' на вашем 1Panel завершилось с ошибкой. Подробности в панели."
+ClamAlert: "Антивирусная проверка 1Panel обнаружила {{ .num }} заражённых файлов. Подробности смотрите в панели."
+WebSiteAlert: "На вашем 1Panel {{ .num }} веб-сайтов истекают через {{ .day }} дней. Подробности смотрите в панели."
+SSLAlert: "На вашем 1Panel {{ .num }} SSL-сертификатов истекают через {{ .day }} дней. Подробности смотрите в панели."
+DiskUsedAlert: "Диск '{{ .name }}' на вашем 1Panel использует {{ .used }}. Подробности смотрите в панели."
+ResourceAlert: "Средняя загрузка {{ .name }} за {{ .time }} минут составляет {{ .used }}. Подробности смотрите в панели."
+PanelVersionAlert: "Доступна новая версия 1Panel. Обновитесь через панель."
+PanelPwdExpirationAlert: "Пароль для 1Panel истекает через {{ .day }} дней. Подробности смотрите в панели."
+CommonAlert: "Ваш 1Panel, {{ .msg }}. Подробности смотрите, войдя в панель."
+NodeExceptionAlert: "Ваш 1Panel, {{ .num }} узлов работают неправильно. Подробности смотрите, войдя в панель."
+LicenseExceptionAlert: "Ваш 1Panel, {{ .num }} лицензий работают неправильно. Подробности смотрите, войдя в панель."
+SSHAndPanelLoginAlert: "Ваш 1Panel, обнаружен аномальный вход в панель {{ .name }} с {{ .ip }}. Подробности смотрите, войдя в панель."
+
+#disk
+DeviceNotFound: "Устройство {{ .name }} не найдено"
+DeviceIsMounted: "Устройство {{ .name }} подключено, сначала отключите"
+PartitionDiskErr: "Не удалось разделить, {{ .err }}"
+FormatDiskErr: "Не удалось отформатировать диск, {{ .err }}"
+MountDiskErr: "Не удалось подключить диск, {{ .err }}"
+UnMountDiskErr: "Не удалось отключить диск, {{ .err }}"
+XfsNotFound: "Файловая система xfs не обнаружена, сначала установите xfsprogs"

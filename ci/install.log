@@ -1,0 +1,66 @@
+[0;34m[1Panel Log]: ======================= 开始安装 ======================= [0m
+[0;34m[1Panel Log]: 您选择的安装路径是 /opt [0m
+[0;34m[1Panel Log]: 已添加腾讯云内网镜像加速配置。 [0m
+[0;34m[1Panel Log]: 配置文件已存在，我们将备份现有的配置文件到:  /etc/docker/daemon.json.1panel_bak. [0m
+[0;34m[1Panel Log]: 创建新配置文件 /etc/docker/daemon.json... [0m
+[0;34m[1Panel Log]: 已添加镜像加速配置。 [0m
+[0;34m[1Panel Log]: 正在重启 Docker 服务... [0m
+[0;32m[1Panel Log]: Docker 服务已成功重启。 [0m
+[0;34m[1Panel Log]: 您设置的端口是:  8090 [0m
+[0;34m[1Panel Log]: 您设置的面板安全入口是 asd [0m
+[0;34m[1Panel Log]: 您设置的面板用户是 admin [0m
+[0;34m[1Panel Log]: 设置 1Panel 面板密码，设置后按回车键继续 (默认是 fd3fdf56ec):  [0m
+[0;34m[1Panel Log]: 正在配置 1Panel 服务 [0m
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+[0;34m[1Panel Log]: 正在启动 1Panel 服务 [0m
+[0;34m[1Panel Log]: ======================= 开始安装 ======================= [0m
+[0;34m[1Panel Log]: 您选择的安装路径是 /opt [0m
+[0;34m[1Panel Log]: 已添加腾讯云内网镜像加速配置。 [0m
+[0;34m[1Panel Log]: 配置文件已存在，我们将备份现有的配置文件到:  /etc/docker/daemon.json.1panel_bak. [0m
+[0;34m[1Panel Log]: 创建新配置文件 /etc/docker/daemon.json... [0m
+[0;34m[1Panel Log]: 已添加镜像加速配置。 [0m
+[0;34m[1Panel Log]: 正在重启 Docker 服务... [0m
+[0;32m[1Panel Log]: Docker 服务已成功重启。 [0m
+[0;34m[1Panel Log]: 您设置的端口是:  8090 [0m
+[0;34m[1Panel Log]: 您设置的面板安全入口是 asd [0m
+[0;34m[1Panel Log]: 您设置的面板用户是 admin [0m
+[0;34m[1Panel Log]: 设置 1Panel 面板密码，设置后按回车键继续 (默认是 fd6bc26f2a):  [0m
+[0;34m[1Panel Log]: 正在配置 1Panel 服务 [0m
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+[0;34m[1Panel Log]: 正在启动 1Panel 服务 [0m
+[0;34m[1Panel Log]: ======================= 开始安装 ======================= [0m
+[0;34m[1Panel Log]: 请提供目录的完整路径 [0m
+[0;34m[1Panel Log]: ======================= 开始安装 ======================= [0m
+[0;34m[1Panel Log]: 您选择的安装路径是 /opt [0m
+[0;34m[1Panel Log]: 已添加腾讯云内网镜像加速配置。 [0m
+[0;34m[1Panel Log]: 配置文件已存在，我们将备份现有的配置文件到:  /etc/docker/daemon.json.1panel_bak. [0m
+[0;34m[1Panel Log]: 创建新配置文件 /etc/docker/daemon.json... [0m
+[0;34m[1Panel Log]: 已添加镜像加速配置。 [0m
+[0;34m[1Panel Log]: 正在重启 Docker 服务... [0m
+[0;32m[1Panel Log]: Docker 服务已成功重启。 [0m
+[0;34m[1Panel Log]: 您设置的端口是:  8090 [0m
+[0;34m[1Panel Log]: 您设置的面板安全入口是 asd [0m
+[0;34m[1Panel Log]: 您设置的面板用户是 admin [0m
+[0;34m[1Panel Log]: 设置 1Panel 面板密码，设置后按回车键继续 (默认是 7326c2baa3):  [0m
+[0;34m[1Panel Log]: 正在配置 1Panel 服务 [0m
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+[0;34m[1Panel Log]: 正在启动 1Panel 服务 [0m
+[0;34m[1Panel Log]: ======================= 开始安装 ======================= [0m
+[0;34m[1Panel Log]: 您选择的安装路径是 /opt [0m
+[0;34m[1Panel Log]: 已添加腾讯云内网镜像加速配置。 [0m
+[0;34m[1Panel Log]: 配置文件已存在，我们将备份现有的配置文件到:  /etc/docker/daemon.json.1panel_bak. [0m
+[0;34m[1Panel Log]: 创建新配置文件 /etc/docker/daemon.json... [0m
+[0;34m[1Panel Log]: 已添加镜像加速配置。 [0m
+[0;34m[1Panel Log]: 正在重启 Docker 服务... [0m
+[0;32m[1Panel Log]: Docker 服务已成功重启。 [0m
+[0;34m[1Panel Log]: 您设置的端口是:  8090 [0m
+[0;34m[1Panel Log]: 您设置的面板安全入口是 asdf [0m
+[0;34m[1Panel Log]: 您设置的面板用户是 admin [0m
+[0;34m[1Panel Log]: 设置 1Panel 面板密码，设置后按回车键继续 (默认是 1e5217b56d):  [0m
+[0;34m[1Panel Log]: 正在配置 1Panel 服务 [0m
+System has not been booted with systemd as init system (PID 1). Can't operate.
+Failed to connect to bus: Host is down
+[0;34m[1Panel Log]: 正在启动 1Panel 服务 [0m

@@ -1,3 +1,4 @@
 build/
 frontend/node_modules/
 frontend/package-lock.json
+/workspace/1panel/core/cmd/server/web/assets
